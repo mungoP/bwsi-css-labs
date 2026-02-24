@@ -37,6 +37,12 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
     else:
         raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
 
+def checkValid(inp):
+    if inp == "add" or inp == "subtract" or inp == "multiply" or inp == "divide":
+        return True
+    else:
+        return False
+
 def main():
     
     print(f"===== Simple Calculator =====")
@@ -54,14 +60,13 @@ def main():
             break
         except ValueError:
             print("Invalid input")
-    isNotString = True
-    while isNotString:
+    isNotValid = True
+    while isNotValid:
         operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
-        if not isinstance(operation, str):
-            isNotString = True
+        if not checkValid(operation):
             print("Invalid input")
         else:
-            isNotString = False
+            isNotValid = False
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
