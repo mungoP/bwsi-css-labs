@@ -1,0 +1,23 @@
+"""
+lab_1a.py
+
+The first lab in the BWSI CSS course. To complete this lab, fill out the variable on line 10
+with your name. Then, save the code, add it to the staging area, and commit it to the Git tree.
+<<<<<<< HEAD
+This is to simulate a change made on a robot: robot_speed = 10 # m/s
+=======
+This is to simulate a change made on a robot: robot_speed = 20 # m/s
+>>>>>>> b4b82d948457913e57b4836c3e77b735070545ac
+"""
+
+
+def main():
+    print("Hello World!")
+
+    name = "Mungo"  # TODO: Insert your name between the double quotes
+
+    print(f"{name}, Welcome to the CSS course!")
+
+
+if __name__ == "__main__":
+    main()
